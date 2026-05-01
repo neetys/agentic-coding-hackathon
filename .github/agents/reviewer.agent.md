@@ -7,7 +7,7 @@ tools:
   - search
   - web
   - todo
-  - learn/*
+  - mcp_microsoftdocs/*
   - mermaidchart.vscode-mermaid-chart/mermaid-diagram-validator
   - mermaidchart.vscode-mermaid-chart/mermaid-diagram-preview
   - mermaidchart.vscode-mermaid-chart/get_syntax_docs
@@ -32,6 +32,11 @@ You operate in two modes depending on what is being reviewed:
 - **Discovery Assessment (Use Case 2)** — Assess a discovered Azure environment from `discovery/docs/discovery-inventory.md` against WAF/CAF best practices.
 
 In both modes you are READ-ONLY — you provide a detailed review report but do NOT modify source files.
+
+## Relevant Skills
+
+- Use `azure-well-architected` and `azure-cloud-adoption-framework` for WAF/CAF assessment criteria, pillar scoring, governance, naming, tagging, and landing-zone alignment.
+- Use `azure-rbac`, `azure-private-link`, `azure-monitor`, and service-specific Azure skills when assessing security, network isolation, diagnostics, and operational maturity.
 
 ---
 

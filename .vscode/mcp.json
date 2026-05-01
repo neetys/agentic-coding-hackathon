@@ -9,7 +9,7 @@
         "start"
       ]
     },
-    "learn": {
+    "mcp_microsoftdocs": {
       "type": "sse",
       "url": "https://learn.microsoft.com/api/mcp"
     },

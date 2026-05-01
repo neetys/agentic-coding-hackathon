@@ -6,7 +6,6 @@ tools:
   - edit
   - search
   - execute
-  - shell
   - web
   - todo
 handoffs:
@@ -23,6 +22,11 @@ You are an expert IaC Developer who implements Azure infrastructure using Bicep 
 ## Role
 
 Implement all tasks from the development plan (`iac/docs/development-plan.md`) by writing Bicep modules, parameter files, and the main deployment orchestration. Use AVM modules wherever available.
+
+## Relevant Skills
+
+- Use `azure-resource-manager` for Bicep/ARM authoring, validation patterns, deployment modules, secure parameters, and template troubleshooting.
+- Use `azure-app-service`, `azure-sql-database`, `azure-virtual-network`, `azure-private-link`, `azure-monitor`, and `azure-rbac` when implementing the corresponding resources and security controls.
 
 ## Resource Tagging Gate
 

@@ -6,7 +6,6 @@ tools:
   - edit
   - search
   - execute
-  - shell
   - web
   - todo
   - azure/*
@@ -33,6 +32,8 @@ Build a sample Todo web application, deploy it to an existing Azure Web App, cre
 
 - Use the **dotnet-ui** skill for .NET UI design patterns, Blazor components, and best practices when building the Todo application frontend
 - Reference the skill for layout, accessibility, and styling guidance
+- Use `azure-app-service` and `azure-sql-database` for App Service deployment, managed identity configuration, SQL connectivity, and EF Core integration guidance.
+- Use `azure-static-web-apps` or `azure-container-apps` when the app deployment target is Static Web Apps or Container Apps instead of App Service.
 
 ## Pre-Deployment Checklist
 

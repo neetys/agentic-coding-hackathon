@@ -56,6 +56,17 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 Verify: `python3 --version` (macOS/Linux) or `python --version` (Windows) and `uv --version`
 
+### VS Code extensions (Spec-Driven workflow)
+
+Install these extensions in VS Code:
+
+- **GitHub Copilot** (`github.copilot`)
+- **GitHub Copilot Chat** (`github.copilot-chat`)
+- **Spec Kit Companion** (`alfredoperez.speckit-companion`)
+- **OpenSpec for Copilot** (`atman-dev.openspec-for-copilot`)
+
+> In this repository's devcontainer/Codespaces setup, these extensions are already pre-installed.
+
 ### Azure CLI (for deployment)
 
 ```bash
@@ -102,7 +113,9 @@ Pick **one** option and follow its track through the entire walkthrough.
 
 **Terminal**:
 ```bash
-specify init --here --ai copilot
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+specify version
+specify init --here --integration copilot
 ```
 
 ### Option B: OpenSpec
@@ -111,7 +124,10 @@ specify init --here --ai copilot
 ```bash
 npm install -g @fission-ai/openspec@latest
 openspec init
+openspec view
 ```
+
+Use `openspec view` throughout implementation to track proposal status.
 
 ---
 
@@ -248,6 +264,8 @@ Describe WHAT to build, not HOW. Include acceptance criteria and edge cases for 
 /opsx:propose "Delete Task: Each task card has a delete button/icon. Clicking it removes the task from the board and from local storage. Deletion is immediate (no confirmation required for MVP)."
 ```
 
+Create all proposals first. In Step 4, apply proposals one-by-one with `/opsx:apply`.
+
 **Verify before continuing**:
 - [ ] Specs cover all 5 features
 - [ ] Each spec has acceptance criteria
@@ -271,7 +289,7 @@ Review the generated plan. Then:
 
 Review the task list. Then:
 ```
-/speckit.implement in this directory and do NOT DELETE excisting files from this folder
+/speckit.implement in this directory and do NOT DELETE existing files from this folder
 ```
 
 ### If using OpenSpec
@@ -280,6 +298,8 @@ Review the task list. Then:
 ```
 /opsx:apply
 ```
+
+Apply only one proposal per `/opsx:apply`. After each apply, run `openspec view` in the terminal, verify generated changes, and then apply the next proposal.
 
 ### Verify the app locally
 
@@ -466,6 +486,8 @@ Then: `/speckit.implement` → write tests → deploy.
 /opsx:propose "Due Dates: Add an optional due date field to tasks. Due date is displayed on the task card. Overdue tasks (past due date) are highlighted with a red border. Tasks within a column can be sorted by due date."
 /opsx:apply
 ```
+
+For OpenSpec, continue applying each proposal separately and use `openspec view` to track pending/completed proposals.
 
 Then: write tests → deploy.
 

@@ -6,7 +6,6 @@ tools:
   - edit
   - search
   - execute
-  - shell
   - web
   - todo
 handoffs:
@@ -27,6 +26,11 @@ You are an expert IaC Testing Engineer who validates, tests, and fixes infrastru
 ## Role
 
 Execute validation tests on the Bicep/Terraform code, identify errors, fix them, and re-run until everything passes. You operate in an iterative fix-and-verify loop.
+
+## Relevant Skills
+
+- Use `azure-resource-manager` for Bicep diagnostics, linting behavior, what-if validation, and deployment troubleshooting.
+- Use `azure-well-architected`, `azure-private-link`, `azure-rbac`, and service-specific Azure skills when validating security, reliability, and operational requirements.
 
 ## Azure Authentication Gate
 

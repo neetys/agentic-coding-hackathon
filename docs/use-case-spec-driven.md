@@ -56,7 +56,12 @@ Verify: `python3 --version` (should show 3.12+) and `uv --version`
 
 - Download VS Code: [https://code.visualstudio.com](https://code.visualstudio.com)
 - Install the **GitHub Copilot** extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+- Install the **GitHub Copilot Chat** extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
+- Install **Spec Kit Companion** (`alfredoperez.speckit-companion`) for Spec Kit slash command support
+- Install **OpenSpec for Copilot** (`atman-dev.openspec-for-copilot`) for OpenSpec slash command support
 - Or use **GitHub Codespaces** (no local install needed)
+
+> **Codespaces/devcontainer**: these extensions are already pre-installed in this repo.
 
 ### Playwright (for E2E testing)
 
@@ -121,7 +126,9 @@ Pick **one** of the two options below. Both follow the same overall workflow but
 
 **Terminal**:
 ```bash
-specify init --here --ai copilot
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+specify version
+specify init --here --integration copilot
 ```
 
 This creates a `specs/` folder and registers Spec Kit commands in Copilot Chat. You'll use these slash commands later:
@@ -147,8 +154,10 @@ This creates an `openspec/` folder and registers OpenSpec commands in Copilot Ch
 | Command | Purpose |
 |---|---|
 | `/opsx:propose <idea>` | Propose a new feature |
-| `/opsx:apply` | Implement the current proposal |
+| `/opsx:apply` | Implement one proposal at a time |
 | `/opsx:archive` | Archive completed changes |
+
+Use `openspec view` in the terminal to inspect proposal status and current workflow progress.
 
 **Verify**: Confirm your chosen tool initialized successfully (config files present in the project folder).
 
@@ -223,6 +232,8 @@ Repeat for each feature:
 /opsx:propose "<Feature 2>: <brief description with acceptance criteria>"
 ```
 
+Create proposals for all core features first. In Step 4, apply each proposal separately with `/opsx:apply` and verify in between.
+
 **Key principle**: Specify **WHAT** to build, not **HOW**. Focus on behavior, not implementation details.
 
 **Verify before continuing**:
@@ -256,6 +267,8 @@ Review the tasks, then:
 ```
 /opsx:apply
 ```
+
+Apply proposals one-by-one. After each `/opsx:apply`, run `openspec view` in the terminal to confirm status, then run `/opsx:apply` again for the next proposal until all proposals are completed.
 
 **Start and verify locally**:
 
@@ -386,6 +399,8 @@ Then: `/speckit.implement` → write tests → deploy.
 /opsx:propose "<New feature description with acceptance criteria>"
 /opsx:apply
 ```
+For OpenSpec, apply proposals separately. Use `openspec view` between applies to track which proposals are pending or completed.
+
 Then: write tests → deploy.
 
 Each feature follows the same cycle: **specify → implement → test → deploy**

@@ -27,9 +27,10 @@ You decide what agents you need, what each one does, how they hand off to each o
 |---|---|---|---|
 | **Type** | Greenfield IaC | Brownfield Assessment | Greenfield Application |
 | **Goal** | Deploy Azure infrastructure from scratch | Discover & assess a live Azure environment | Build a web app from specifications |
-| **You Build** | Agents + prompts for an IaC pipeline | Agents + prompts for a discovery pipeline | Agents + prompts for a spec-driven pipeline |
+| **You Build** | Agents + prompts for an IaC pipeline | Agents + prompts for a discovery pipeline | A spec-driven app workflow using Spec Kit or OpenSpec |
 | **Output** | Bicep modules + deployed resources | Assessment reports + Mermaid diagrams | Working app + Playwright tests |
 | **Guide** | [Use Case 1 Guide](docs/use-case-iac.md) | [Use Case 2 Guide](docs/use-case-discovery.md) | [Use Case 3 Guide](docs/use-case-spec-driven.md) |
+| **Sample** | [IaC Walkthrough](docs/sample/sample-iac.md) | [Discovery Walkthrough](docs/sample/sample-discovery.md) | [Spec-Driven Walkthrough](docs/sample/sample-spec-driven.md) |
 
 ---
 
@@ -38,6 +39,7 @@ You decide what agents you need, what each one does, how they hand off to each o
 - **Azure Subscription** with Contributor access
 - **GitHub Copilot** license (Business or Enterprise recommended)
 - **VS Code** (or Codespaces) with GitHub Copilot & Copilot Chat
+- **For Use Case 3 (Spec-Driven)**: install `alfredoperez.speckit-companion` and `atman-dev.openspec-for-copilot`
 - **Azure CLI** with Bicep installed
 
 > **Tip**: Open this repo in **GitHub Codespaces** — the devcontainer pre-installs all tools automatically!
@@ -71,17 +73,27 @@ cd energize-your-code-hackathon
 
 Open in VS Code or Codespaces. The devcontainer will install all required tools.
 
-### 2. Pick Your Use Case
+### 2. Choose Your Path
 
-Choose one use case and follow its step-by-step participant guide:
+There are two good ways through the hackathon:
+
+**Recommended first: follow a sample walkthrough.**
+
+The samples are the fastest way to understand the concept, see the agentic workflow in action, and learn how agents, prompts, skills, and MCP servers work together:
+
+- [Sample Walkthrough: IaC](docs/sample/sample-iac.md)
+- [Sample Walkthrough: Discovery](docs/sample/sample-discovery.md)
+- [Sample Walkthrough: Spec-Driven](docs/sample/sample-spec-driven.md)
+
+**Then: build your own workflow with a use case.**
+
+The use case guides are ideal when you want to create your own agentic template during the hackathon, or continue exploring after the hack. Pick one guide:
 
 - [Use Case 1: Infrastructure as Code](docs/use-case-iac.md) — Build Azure infra with Bicep
 - [Use Case 2: Agentic Discovery](docs/use-case-discovery.md) — Discover & assess a live Azure environment
 - [Use Case 3: Spec-Driven Development](docs/use-case-spec-driven.md) — Build a web app from specs
 
-### 3. Build Your Agentic Workflow
-
-Each guide walks you through:
+When you follow a use case guide, it walks you through the things to think about while designing your workflow:
 
 1. **Define your goal** — What exactly are you building or discovering?
 2. **Choose your tools** — Which MCP servers, skills, and extensions do you need?
@@ -90,15 +102,7 @@ Each guide walks you through:
 5. **Execute & iterate** — Run your prompts, verify output, refine
 6. **Verify & present** — Demo your workflow and results
 
-### 4. Or Follow the Pre-Built Walkthrough
-
-Don't want to build your own agentic template? Each use case has a **sample walkthrough** that walks you step-by-step through executing the pre-built agents and prompts:
-
-- [Sample Walkthrough: IaC](docs/sample/sample-iac.md)
-- [Sample Walkthrough: Discovery](docs/sample/sample-discovery.md)
-- [Sample Walkthrough: Spec-Driven](docs/sample/sample-spec-driven.md)
-
-### 5. Get Unstuck
+### 3. Get Unstuck
 
 If you're building your own template and get stuck, this repo includes **reference examples** — agents, prompts, skills, and MCP configuration. Browse them for inspiration, but build your own!
 
@@ -111,7 +115,7 @@ These MCP servers are pre-configured in `.vscode/mcp.json` and ready to use in y
 | Server | Purpose | Useful For |
 |---|---|---|
 | **Azure MCP** | Azure resource management, discovery, deployment | All use cases |
-| **Learn MCP** | Microsoft documentation, WAF/CAF references | Use Cases 1 & 2 |
+| **Learn MCP** (`mcp_microsoftdocs`) | Microsoft documentation, WAF/CAF references | Use Cases 1 & 2 |
 | **Playwright MCP** | Browser automation and E2E testing | Use Case 3 |
 
 > The **Bicep MCP** is auto-enabled by the `ms-azuretools.vscode-bicep` extension — no manual configuration needed.
@@ -138,7 +142,6 @@ This repo includes a complete set of example agents, prompts, and skills that de
 | `discoverer` | Azure environment scanner | Discovery |
 | `reporter` | Report & diagram writer | Discovery |
 | `migration-planner` | PaaS migration planner | Discovery |
-| `spec-coach` | Spec-driven methodology coach | Spec-Driven |
 
 ### Example Prompts (`.github/prompts/`)
 
@@ -146,7 +149,7 @@ This repo includes a complete set of example agents, prompts, and skills that de
 |---|---|
 | **IaC** | `iac-1-architect` → `iac-2-review` → `iac-3-plan` → `iac-4-implement` → `iac-5-test` → `iac-6-document` → `iac-7-deploy` |
 | **Discovery** | `disc-1-discover` → `disc-2-assess` → `disc-3-report` → `disc-4-migration` → `disc-5-full-pipeline` |
-| **Spec-Driven** | `spec-1-brainstorm` → `spec-2-setup` → Spec Kit/OpenSpec commands |
+| **Spec-Driven** | Use the participant guide flow with Spec Kit/OpenSpec slash commands (no dedicated `spec-*` prompt files) |
 
 ### Copilot Instruction Files (`.github/instructions/`)
 
@@ -168,7 +171,15 @@ These instruction files **auto-activate** when you create or edit agents, prompt
 | `find-skills` | Discover and install additional skills |
 | `update-avm-modules-in-bicep` | Keep AVM module versions current |
 | `terraform-style-guide` | Terraform HCL standards |
-| `spec-driven-guide` | Spec-driven methodology reference |
+
+### Azure Skills Added To This Project
+
+This project now also includes a curated set of Azure skills sourced from the MicrosoftDocs Azure Agent Skills repository:
+
+- Repository: [MicrosoftDocs/agent-skills](https://github.com/MicrosoftDocs/agent-skills)
+- Browse more Azure skills: [MicrosoftDocs/agent-skills/skills](https://github.com/MicrosoftDocs/agent-skills/tree/main/skills)
+
+The scenario-specific skill guidance lives in the custom agents, so participant prompts can stay small. These skills are installed locally under `.github/skills/` and can be used directly in this repository. If you want to expand beyond this curated set, the MicrosoftDocs repository above has a much broader catalog of Azure service skills.
 
 ### Sample Walkthroughs ([docs/sample/](docs/sample/))
 
@@ -178,7 +189,7 @@ Step-by-step guides that execute the pre-built agentic template — for teams wh
 |---|---|---|
 | [IaC Walkthrough](docs/sample/sample-iac.md) | Use Case 1 | Run all 9 IaC prompts end-to-end: architect → review → plan → implement → test → document → deploy |
 | [Discovery Walkthrough](docs/sample/sample-discovery.md) | Use Case 2 | Run all 5 discovery prompts: discover → assess → report → migration plan |
-| [Spec-Driven Walkthrough](docs/sample/sample-spec-driven.md) | Use Case 3 | Run all 6 spec-driven prompts: brainstorm → setup → specify → implement → test → deploy |
+| [Spec-Driven Walkthrough](docs/sample/sample-spec-driven.md) | Use Case 3 | Follow the full spec-driven lifecycle: brainstorm → specify → implement (apply proposals separately for OpenSpec) → test → deploy |
 
 ---
 

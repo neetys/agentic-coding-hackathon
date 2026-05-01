@@ -1,6 +1,84 @@
 {
   "version": 1,
   "skills": {
+    "azure-app-service": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-app-service/SKILL.md",
+      "computedHash": "1185bd4cb57f11e2d5f299e28be0a9aba987e91ef2816f1a03a5b548458cfe60"
+    },
+    "azure-architecture": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-architecture/SKILL.md",
+      "computedHash": "677ce5b5e25f741b56746c6a89b4f4e5fc208b8080a0d9238d6686c6dc9c953a"
+    },
+    "azure-cloud-adoption-framework": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-cloud-adoption-framework/SKILL.md",
+      "computedHash": "d3fdf21bd8ea362ed452bb04bdb373c77c878157dd5cd2b4dc9179c0bbd0c69f"
+    },
+    "azure-container-apps": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-container-apps/SKILL.md",
+      "computedHash": "75a716a84722ee8a4a8585b89a26e8e41998aa68fbb26a6502a9b1638fa31b84"
+    },
+    "azure-monitor": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-monitor/SKILL.md",
+      "computedHash": "cd248fa6ff6eb0a4ea0b1ac7cee863b960337c17cc057f261b63244014849cab"
+    },
+    "azure-private-link": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-private-link/SKILL.md",
+      "computedHash": "be4cda042643f1a355a3ab99ab42d9c999ebeea7347f626eb4553b9354bbf75a"
+    },
+    "azure-rbac": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-rbac/SKILL.md",
+      "computedHash": "6ae39ba1bf689f2702cef16703e35ba952f85e9bba45cbdce398feb7d17d546d"
+    },
+    "azure-resource-graph": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-resource-graph/SKILL.md",
+      "computedHash": "5063956d82d94470c2800caeb2e795aba56deac7f030ca3bbc4761c1e38a453c"
+    },
+    "azure-resource-manager": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-resource-manager/SKILL.md",
+      "computedHash": "19096b2112ea83cdfbb857813dd59c457208c6d6056230dce47b3608aa98742c"
+    },
+    "azure-sql-database": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-sql-database/SKILL.md",
+      "computedHash": "f30c7d14ba67105f0b27aad6eb2f4958e24c1f178016ab1a4d6b6bd92ba1a959"
+    },
+    "azure-static-web-apps": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-static-web-apps/SKILL.md",
+      "computedHash": "348fc488c41b5932e93257e404375619eb36c17612dfc8a9f18de988b865c914"
+    },
+    "azure-virtual-network": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-virtual-network/SKILL.md",
+      "computedHash": "5b5558adf5213f0f64532a02a8601763ec884cace4c0677206b8a721213186fe"
+    },
+    "azure-well-architected": {
+      "source": "MicrosoftDocs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/azure-well-architected/SKILL.md",
+      "computedHash": "1450ee045544ee0d38146f0c0695563f75921c5daf67ebf6c7539538e97c3eee"
+    },
     "dotnet-ui": {
       "source": "novotnyllc/dotnet-artisan",
       "sourceType": "github",

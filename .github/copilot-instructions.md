@@ -20,7 +20,7 @@ Three MCP servers are pre-configured in `.vscode/mcp.json`:
 | Server | Purpose | Used By |
 |--------|---------|---------|
 | **Azure MCP** | Azure resource management, discovery, deployment | All use cases |
-| **Learn MCP** | Microsoft documentation, WAF/CAF references | Use Cases 1 & 2 |
+| **Learn MCP** (`mcp_microsoftdocs`) | Microsoft documentation, WAF/CAF references | Use Cases 1 & 2 |
 | **Playwright MCP** | Browser automation and E2E testing | Use Case 3 |
 
 ## Use Case 1: IaC — Target Architecture
