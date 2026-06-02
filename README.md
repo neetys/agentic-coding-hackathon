@@ -1,12 +1,19 @@
-# Energize Your Code - Hackathon
+# Build with Copilot – Agentic Coding Hackathon
 
 ![Energize Your Code Banner](docs/images/hackathon-logo.png)
 
 > **Build Your Own AI-Powered Workflow with GitHub Copilot**
->
+> Designed for organisations across industries — including staffing, enterprise IT, and software development teams
 > Choose a use case. Design your own agents, prompts, skills, and MCP server configuration. Execute your workflow and deliver results.
 
 ---
+
+## Welcome
+
+This hackathon focuses on how to build faster using AI-assisted engineering with GitHub Copilot.
+
+Instead of industry-specific solutions, you'll learn how to design and implement agentic workflows that can be applied across different domains — including staffing, enterprise IT, and SaaS environments.
+
 
 ## The Challenge
 
@@ -67,8 +74,8 @@ az account show --query "{name:name, id:id, tenantId:tenantId}" -o table
 ### 1. Clone and Open
 
 ```bash
-git clone https://github.com/pascalvanderheiden/energize-your-code-hackathon.git
-cd energize-your-code-hackathon
+git clone https://github.com/neetys/agentic-coding-hackathon.git
+cd agentic-coding-hackathon
 ```
 
 Open in VS Code or Codespaces. The devcontainer will install all required tools.
@@ -238,4 +245,4 @@ Step-by-step guides that execute the pre-built agentic template — for teams wh
 
 ---
 
-*Built for the Energize Your Code Hackathon*
+*Built for the Agentic Coding Hackathon at Microsoft*
