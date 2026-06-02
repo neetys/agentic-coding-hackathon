@@ -1,6 +1,6 @@
 # Build with Copilot – Agentic Coding Hackathon
 
-![Energize Your Code Banner](docs/images/hackathon-logo.png)
+![Agentic Coding Hackathon Banner](docs/images/hackathon-logo.png)
 
 > **Build Your Own AI-Powered Workflow with GitHub Copilot**
 > Designed for organisations across industries — including staffing, enterprise IT, and software development teams
@@ -12,7 +12,7 @@
 
 This hackathon focuses on how to build faster using AI-assisted engineering with GitHub Copilot.
 
-Instead of industry-specific solutions, you'll learn how to design and implement agentic workflows that can be applied across different domains — including staffing, enterprise IT, and SaaS environments.
+Instead of industry-specific solutions, you'll learn how to design and implement agentic workflows that can be applied across different domains — especially staffing, enterprise IT, and SaaS environments.
 
 
 ## The Challenge

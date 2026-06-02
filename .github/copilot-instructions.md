@@ -1,4 +1,4 @@
-# Energize Your Code Hackathon — Copilot Instructions
+# Agwentic Coding Hackathon — Copilot Instructions
 
 ## Project Context
 
