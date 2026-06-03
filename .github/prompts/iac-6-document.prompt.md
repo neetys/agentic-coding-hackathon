@@ -11,7 +11,7 @@ Generate comprehensive documentation for the complete project.
 
 ### 1. Update `iac/README.md`
 - Add project overview with the architecture diagram from `iac/docs/architecture.md`
-- Include the hackathon banner: `![Energize Your Code Banner](docs/images/hackathon-logo.png)`
+- Include the hackathon banner: `![Agentic Coding Hackathon Banner](docs/images/hackathon-logo-ai.png)`
 - Add prerequisites, quick start guide, and project structure
 - Link to all detailed documentation
 

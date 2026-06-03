@@ -71,7 +71,7 @@ Generate detailed, professional documentation for the complete project. Referenc
 - Add tables for structured data (resource lists, cost estimates, checklist items)
 - Include a table of contents for documents longer than 3 sections
 - Reference file paths relative to the repository root
-- Include the hackathon banner in the main README: `![Energize Your Code Banner](docs/images/hackathon-logo.png)`
+- Include the hackathon banner in the main README: `![Agentic Coding Hackathon Banner](docs/images/hackathon-logo-ai.png)`
 
 ## Process
 

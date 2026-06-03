@@ -1,5 +1,5 @@
 {
-  "name": "Energize Your Code - Hackathon",
+  "name": "Agentic Coding Hackathon",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/azure-cli:1": {
