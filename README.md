@@ -3,7 +3,7 @@
 ![Agentic Coding Hackathon Banner](docs/images/hackathon-logo-ai.png)
 
 > **Build Your Own AI-Powered Workflow with GitHub Copilot**
-> Designed for organisations across industries — including staffing, enterprise IT, and software development teams
+> Designed for organisations across industries — including staffing, enterprise IT, and software development teams.
 > Choose a use case. Design your own agents, prompts, skills, and MCP server configuration. Execute your workflow and deliver results.
 
 ---
